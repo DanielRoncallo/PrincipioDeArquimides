@@ -1,0 +1,84 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center">Principio de Arquímedes</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Diagrama</h3>
+        <canvas id="canvas" width="400" height="340" ng-init="vm.Inicio()">
+            Navegador no soporta HTML5
+        </canvas>
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-4 well well-sm">
+                    <label>Empuje</label>
+                    <span>{{vm.empuje}}</span>
+                </div>
+                <div class="col-md-4 well well-sm col-md-offset-1">
+                    <label>Peso</label>
+                    <span>{{vm.fuerza}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Liquido</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-3">
+                                <label>Densidad</label>
+                                <input ng-model="vm.densidad" type="text" name="densidad" class="form-control" placeholder="densidad" />
+                                <span>Kg/m^3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Objeto</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-3">
+                                <label>VolumenDesplazado</label>
+                                <input ng-model="vm.volumenObjeto" type="text" name="volumen" class="form-control" placeholder="volumen" />
+                                <span>m^3</span>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Masa</label>
+                                <input ng-model="vm.masaObjeto" type="text" name="masaObjeto" class="form-control" placeholder="masa" />
+                                <span>Kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" ng-click="vm.CalcularEmpuje()">Calcular</button>
+                </div>
+            </div>
+            <p>
+                El principio de Arquímedes afirma que todo cuerpo sumergido en un fluido experimenta un empuje vertical y hacia arriba igual al peso de fluido desalojado. El principio de Arquímedes se formula así:
+                <var>E</var> =
+                <var>pf</var> *
+                <var>g</var> *
+                <var>v</var>. donde E es el empuje, pf la densidad del fluido, g la gravedad y v el volumen desplazado</p>
+            <p>
+                Hierón II, rey de Siracusa en el siglo III a.C. y pariente de Arquímedes, tenía suficiente confianza en él para plantearle problemas aparentemente imposibles. Cierto orfebre le había fabricado una corona de oro. El rey no estaba muy seguro de que el artesano hubiese obrado rectamente; podría haberse guardado parte del oro que le habían entregado y haberlo sustituido por plata o cobre. Así que Hierón encargó a Arquímedes averiguar si la corona era de oro puro.
+            </p>
+            <p>
+                Arquímedes no sabía qué hacer. El cobre y la plata eran más ligeros que el oro. Si el orfebre hubiese añadido cualquiera de estos metales a la corona, ocuparían un espacio mayor que el de un peso equivalente de oro. Conociendo el espacio ocupado por la corona (es decir, su volumen) podría contestar a Hierón, lo que no sabía era cómo averiguar el volumen de la corona. Arquímedes siguió dando vueltas al problema en los baños públicos. De pronto se puso en pie como impulsado por un resorte: se había dado cuenta de que su cuerpo desplazaba agua fuera de la bañera.
+            </p>
+            <p>
+                El volumen de agua desplazado tenía que ser igual al volumen de su cuerpo. Para averiguar el volumen de cualquier cosa bastaba con medir el volumen de agua que desplazaba. Arquímedes corrió a casa, gritando una y otra vez: "¡Lo encontré, lo encontré!". Llenó de agua un recipiente, metió la corona y midió el volumen de agua desplazada. Luego hizo lo propio con un peso igual de oro puro; el volumen desplazado era menor. El oro de la corona había sido mezclado con un metal más ligero, lo cual le daba un volumen mayor. El rey ordenó ejecutar al orfebre.
+            </p>
+        </div>
+    </div>
+</div>
